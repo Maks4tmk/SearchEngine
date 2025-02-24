@@ -50,8 +50,8 @@ cmake_ninja_workdir = D$:\Work$ Folder\visualC++\SearchEngine\out\build\x64-debu
 build cmake_object_order_depends_target_SearchEngine: phony || cmake_object_order_depends_target_pqxx
 
 build CMakeFiles\SearchEngine.dir\main.cpp.obj: CXX_COMPILER__SearchEngine_unscanned_Debug D$:\Work$ Folder\visualC++\SearchEngine\main.cpp || cmake_object_order_depends_target_SearchEngine
-  DEFINES = -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  DEFINES = -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_NO_LIB -DBOOST_LOCALE_NO_LIB -DBOOST_SYSTEM_NO_LIB -DBOOST_URL_NO_LIB
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -external:I"D:\Work Folder\visualC++\boost\include\boost-1_87" -external:W0
   OBJECT_DIR = CMakeFiles\SearchEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\SearchEngine.dir
@@ -59,8 +59,26 @@ build CMakeFiles\SearchEngine.dir\main.cpp.obj: CXX_COMPILER__SearchEngine_unsca
   TARGET_PDB = SearchEngine.pdb
 
 build CMakeFiles\SearchEngine.dir\spider.cpp.obj: CXX_COMPILER__SearchEngine_unscanned_Debug D$:\Work$ Folder\visualC++\SearchEngine\spider.cpp || cmake_object_order_depends_target_SearchEngine
-  DEFINES = -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_NO_LIB
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  DEFINES = -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_NO_LIB -DBOOST_LOCALE_NO_LIB -DBOOST_SYSTEM_NO_LIB -DBOOST_URL_NO_LIB
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
+  INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -external:I"D:\Work Folder\visualC++\boost\include\boost-1_87" -external:W0
+  OBJECT_DIR = CMakeFiles\SearchEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SearchEngine.dir
+  TARGET_COMPILE_PDB = CMakeFiles\SearchEngine.dir\
+  TARGET_PDB = SearchEngine.pdb
+
+build CMakeFiles\SearchEngine.dir\search.cpp.obj: CXX_COMPILER__SearchEngine_unscanned_Debug D$:\Work$ Folder\visualC++\SearchEngine\search.cpp || cmake_object_order_depends_target_SearchEngine
+  DEFINES = -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_NO_LIB -DBOOST_LOCALE_NO_LIB -DBOOST_SYSTEM_NO_LIB -DBOOST_URL_NO_LIB
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
+  INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -external:I"D:\Work Folder\visualC++\boost\include\boost-1_87" -external:W0
+  OBJECT_DIR = CMakeFiles\SearchEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SearchEngine.dir
+  TARGET_COMPILE_PDB = CMakeFiles\SearchEngine.dir\
+  TARGET_PDB = SearchEngine.pdb
+
+build CMakeFiles\SearchEngine.dir\connection_pool.cpp.obj: CXX_COMPILER__SearchEngine_unscanned_Debug D$:\Work$ Folder\visualC++\SearchEngine\connection_pool.cpp || cmake_object_order_depends_target_SearchEngine
+  DEFINES = -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_NO_LIB -DBOOST_LOCALE_NO_LIB -DBOOST_SYSTEM_NO_LIB -DBOOST_URL_NO_LIB
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -external:I"D:\Work Folder\visualC++\boost\include\boost-1_87" -external:W0
   OBJECT_DIR = CMakeFiles\SearchEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\SearchEngine.dir
@@ -75,10 +93,10 @@ build CMakeFiles\SearchEngine.dir\spider.cpp.obj: CXX_COMPILER__SearchEngine_uns
 #############################################
 # Link the executable SearchEngine.exe
 
-build SearchEngine.exe: CXX_EXECUTABLE_LINKER__SearchEngine_Debug CMakeFiles\SearchEngine.dir\main.cpp.obj CMakeFiles\SearchEngine.dir\spider.cpp.obj | D$:\Work$ Folder\visualC++\boost\lib\libboost_system-vc143-mt-gd-x64-1_87.lib D$:\Work$ Folder\visualC++\boost\lib\libboost_filesystem-vc143-mt-gd-x64-1_87.lib C$:\Program$ Files\PostgreSQL\17\lib\libpq.lib libpqxx-build\src\pqxx.lib D$:\Work$ Folder\visualC++\boost\lib\libboost_system-vc143-mt-gd-x64-1_87.lib D$:\Work$ Folder\visualC++\boost\lib\libboost_atomic-vc143-mt-gd-x64-1_87.lib C$:\Program$ Files\PostgreSQL\17\lib\libpq.lib || libpqxx-build\src\pqxx.lib
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -MDd
+build SearchEngine.exe: CXX_EXECUTABLE_LINKER__SearchEngine_Debug CMakeFiles\SearchEngine.dir\main.cpp.obj CMakeFiles\SearchEngine.dir\spider.cpp.obj CMakeFiles\SearchEngine.dir\search.cpp.obj CMakeFiles\SearchEngine.dir\connection_pool.cpp.obj | D$:\Work$ Folder\visualC++\boost\lib\libboost_system-vc143-mt-gd-x64-1_87.lib D$:\Work$ Folder\visualC++\boost\lib\libboost_filesystem-vc143-mt-gd-x64-1_87.lib D$:\Work$ Folder\visualC++\boost\lib\libboost_locale-vc143-mt-gd-x64-1_87.lib D$:\Work$ Folder\visualC++\boost\lib\libboost_url-vc143-mt-gd-x64-1_87.lib C$:\Program$ Files\PostgreSQL\17\lib\libpq.lib libpqxx-build\src\pqxx.lib D$:\Work$ Folder\visualC++\boost\lib\libboost_atomic-vc143-mt-gd-x64-1_87.lib D$:\Work$ Folder\visualC++\boost\lib\libboost_system-vc143-mt-gd-x64-1_87.lib C$:\Program$ Files\PostgreSQL\17\lib\libpq.lib || libpqxx-build\src\pqxx.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = "D:\Work Folder\visualC++\boost\lib\libboost_system-vc143-mt-gd-x64-1_87.lib"  "D:\Work Folder\visualC++\boost\lib\libboost_filesystem-vc143-mt-gd-x64-1_87.lib"  "C:\Program Files\PostgreSQL\17\lib\libpq.lib"  libpqxx-build\src\pqxx.lib  "D:\Work Folder\visualC++\boost\lib\libboost_system-vc143-mt-gd-x64-1_87.lib"  bcrypt.lib  synchronization.lib  bcrypt.lib  synchronization.lib  "D:\Work Folder\visualC++\boost\lib\libboost_atomic-vc143-mt-gd-x64-1_87.lib"  "C:\Program Files\PostgreSQL\17\lib\libpq.lib"  wsock32.lib  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = "D:\Work Folder\visualC++\boost\lib\libboost_system-vc143-mt-gd-x64-1_87.lib"  "D:\Work Folder\visualC++\boost\lib\libboost_filesystem-vc143-mt-gd-x64-1_87.lib"  "D:\Work Folder\visualC++\boost\lib\libboost_locale-vc143-mt-gd-x64-1_87.lib"  "D:\Work Folder\visualC++\boost\lib\libboost_url-vc143-mt-gd-x64-1_87.lib"  "C:\Program Files\PostgreSQL\17\lib\libpq.lib"  libpqxx-build\src\pqxx.lib  bcrypt.lib  synchronization.lib  bcrypt.lib  synchronization.lib  "D:\Work Folder\visualC++\boost\lib\libboost_atomic-vc143-mt-gd-x64-1_87.lib"  "D:\Work Folder\visualC++\boost\lib\libboost_system-vc143-mt-gd-x64-1_87.lib"  "C:\Program Files\PostgreSQL\17\lib\libpq.lib"  wsock32.lib  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\SearchEngine.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -261,7 +279,7 @@ build libpqxx-build\install\local: phony libpqxx-build\CMakeFiles\install\local.
 build cmake_object_order_depends_target_pqxx: phony || .
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\array.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\array.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -269,7 +287,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\array.cxx.obj: CXX_COMPILER__pqxx_un
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\binarystring.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\binarystring.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -277,7 +295,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\binarystring.cxx.obj: CXX_COMPILER__
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\blob.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\blob.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -285,7 +303,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\blob.cxx.obj: CXX_COMPILER__pqxx_uns
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\connection.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\connection.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -293,7 +311,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\connection.cxx.obj: CXX_COMPILER__pq
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\cursor.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\cursor.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -301,7 +319,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\cursor.cxx.obj: CXX_COMPILER__pqxx_u
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\encodings.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\encodings.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -309,7 +327,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\encodings.cxx.obj: CXX_COMPILER__pqx
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\errorhandler.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\errorhandler.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -317,7 +335,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\errorhandler.cxx.obj: CXX_COMPILER__
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\except.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\except.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -325,7 +343,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\except.cxx.obj: CXX_COMPILER__pqxx_u
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\field.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\field.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -333,7 +351,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\field.cxx.obj: CXX_COMPILER__pqxx_un
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\largeobject.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\largeobject.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -341,7 +359,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\largeobject.cxx.obj: CXX_COMPILER__p
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\notification.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\notification.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -349,7 +367,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\notification.cxx.obj: CXX_COMPILER__
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\params.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\params.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -357,7 +375,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\params.cxx.obj: CXX_COMPILER__pqxx_u
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\pipeline.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\pipeline.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -365,7 +383,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\pipeline.cxx.obj: CXX_COMPILER__pqxx
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\result.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\result.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -373,7 +391,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\result.cxx.obj: CXX_COMPILER__pqxx_u
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\robusttransaction.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\robusttransaction.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -381,7 +399,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\robusttransaction.cxx.obj: CXX_COMPI
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\row.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\row.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -389,7 +407,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\row.cxx.obj: CXX_COMPILER__pqxx_unsc
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\sql_cursor.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\sql_cursor.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -397,7 +415,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\sql_cursor.cxx.obj: CXX_COMPILER__pq
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\strconv.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\strconv.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -405,7 +423,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\strconv.cxx.obj: CXX_COMPILER__pqxx_
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\stream_from.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\stream_from.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -413,7 +431,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\stream_from.cxx.obj: CXX_COMPILER__p
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\stream_to.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\stream_to.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -421,7 +439,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\stream_to.cxx.obj: CXX_COMPILER__pqx
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\subtransaction.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\subtransaction.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -429,7 +447,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\subtransaction.cxx.obj: CXX_COMPILER
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\time.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\time.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -437,7 +455,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\time.cxx.obj: CXX_COMPILER__pqxx_uns
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\transaction.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\transaction.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -445,7 +463,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\transaction.cxx.obj: CXX_COMPILER__p
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\transaction_base.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\transaction_base.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -453,7 +471,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\transaction_base.cxx.obj: CXX_COMPIL
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\util.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\util.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -461,7 +479,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\util.cxx.obj: CXX_COMPILER__pqxx_uns
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\version.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\version.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -469,7 +487,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\version.cxx.obj: CXX_COMPILER__pqxx_
   TARGET_PDB = libpqxx-build\src\pqxx.pdb
 
 build libpqxx-build\src\CMakeFiles\pqxx.dir\wait.cxx.obj: CXX_COMPILER__pqxx_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\src\wait.cxx || cmake_object_order_depends_target_pqxx
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include" -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server"
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   OBJECT_FILE_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
@@ -485,7 +503,7 @@ build libpqxx-build\src\CMakeFiles\pqxx.dir\wait.cxx.obj: CXX_COMPILER__pqxx_uns
 # Link the static library libpqxx-build\src\pqxx.lib
 
 build libpqxx-build\src\pqxx.lib: CXX_STATIC_LIBRARY_LINKER__pqxx_Debug libpqxx-build\src\CMakeFiles\pqxx.dir\array.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\binarystring.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\blob.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\connection.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\cursor.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\encodings.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\errorhandler.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\except.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\field.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\largeobject.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\notification.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\params.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\pipeline.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\result.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\robusttransaction.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\row.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\sql_cursor.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\strconv.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\stream_from.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\stream_to.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\subtransaction.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\time.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\transaction.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\transaction_base.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\util.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\version.cxx.obj libpqxx-build\src\CMakeFiles\pqxx.dir\wait.cxx.obj
-  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -MDd
+  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -MDd
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = libpqxx-build\src\CMakeFiles\pqxx.dir
   POST_BUILD = cd .
@@ -668,7 +686,7 @@ build libpqxx-build\include\install\local: phony libpqxx-build\include\CMakeFile
 build cmake_object_order_depends_target_runner: phony || cmake_object_order_depends_target_pqxx
 
 build libpqxx-build\test\CMakeFiles\runner.dir\runner.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\runner.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -676,7 +694,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\runner.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test00.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test00.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -684,7 +702,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test00.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test01.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test01.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -692,7 +710,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test01.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test02.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test02.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -700,7 +718,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test02.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test04.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test04.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -708,7 +726,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test04.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test07.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test07.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -716,7 +734,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test07.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test10.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test10.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -724,7 +742,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test10.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test11.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test11.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -732,7 +750,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test11.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test13.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test13.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -740,7 +758,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test13.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test14.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test14.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -748,7 +766,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test14.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test16.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test16.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -756,7 +774,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test16.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test17.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test17.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -764,7 +782,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test17.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test18.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test18.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -772,7 +790,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test18.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test20.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test20.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -780,7 +798,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test20.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test21.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test21.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -788,7 +806,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test21.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test26.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test26.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -796,7 +814,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test26.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test29.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test29.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -804,7 +822,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test29.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test30.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test30.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -812,7 +830,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test30.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test32.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test32.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -820,7 +838,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test32.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test37.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test37.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -828,7 +846,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test37.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test39.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test39.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -836,7 +854,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test39.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test46.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test46.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -844,7 +862,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test46.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test56.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test56.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -852,7 +870,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test56.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test60.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test60.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -860,7 +878,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test60.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test61.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test61.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -868,7 +886,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test61.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test62.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test62.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -876,7 +894,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test62.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test69.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test69.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -884,7 +902,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test69.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test70.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test70.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -892,7 +910,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test70.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test71.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test71.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -900,7 +918,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test71.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test72.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test72.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -908,7 +926,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test72.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test74.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test74.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -916,7 +934,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test74.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test75.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test75.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -924,7 +942,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test75.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test76.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test76.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -932,7 +950,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test76.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test77.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test77.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -940,7 +958,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test77.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test78.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test78.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -948,7 +966,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test78.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test79.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test79.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -956,7 +974,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test79.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test82.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test82.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -964,7 +982,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test82.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test84.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test84.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -972,7 +990,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test84.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test87.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test87.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -980,7 +998,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test87.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test88.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test88.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -988,7 +1006,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test88.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test89.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test89.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -996,7 +1014,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test89.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\test90.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\test90.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -1004,7 +1022,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\test90.cxx.obj: CXX_COMPILER__run
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_array.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_array.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1012,7 +1030,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_array.cxx.obj: CXX_COMP
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_binarystring.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_binarystring.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1020,7 +1038,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_binarystring.cxx.obj: C
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_blob.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_blob.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1028,7 +1046,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_blob.cxx.obj: CXX_COMPI
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_cancel_query.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_cancel_query.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1036,7 +1054,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_cancel_query.cxx.obj: C
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_column.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_column.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1044,7 +1062,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_column.cxx.obj: CXX_COM
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_composite.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_composite.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1052,7 +1070,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_composite.cxx.obj: CXX_
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_connection.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_connection.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1060,7 +1078,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_connection.cxx.obj: CXX
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_cursor.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_cursor.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1068,7 +1086,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_cursor.cxx.obj: CXX_COM
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_encodings.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_encodings.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1076,7 +1094,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_encodings.cxx.obj: CXX_
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_error_verbosity.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_error_verbosity.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1084,7 +1102,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_error_verbosity.cxx.obj
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_errorhandler.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_errorhandler.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1092,7 +1110,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_errorhandler.cxx.obj: C
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_escape.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_escape.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1100,7 +1118,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_escape.cxx.obj: CXX_COM
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_exceptions.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_exceptions.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1108,7 +1126,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_exceptions.cxx.obj: CXX
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_field.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_field.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1116,7 +1134,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_field.cxx.obj: CXX_COMP
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_float.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_float.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1124,7 +1142,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_float.cxx.obj: CXX_COMP
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_largeobject.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_largeobject.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1132,7 +1150,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_largeobject.cxx.obj: CX
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_nonblocking_connect.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_nonblocking_connect.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1140,7 +1158,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_nonblocking_connect.cxx
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_notice_handler.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_notice_handler.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1148,7 +1166,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_notice_handler.cxx.obj:
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_notification.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_notification.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1156,7 +1174,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_notification.cxx.obj: C
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_pipeline.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_pipeline.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1164,7 +1182,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_pipeline.cxx.obj: CXX_C
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_prepared_statement.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_prepared_statement.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1172,7 +1190,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_prepared_statement.cxx.
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_range.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_range.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1180,7 +1198,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_range.cxx.obj: CXX_COMP
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_read_transaction.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_read_transaction.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1188,7 +1206,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_read_transaction.cxx.ob
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_result_iteration.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_result_iteration.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1196,7 +1214,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_result_iteration.cxx.ob
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_result_slicing.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_result_slicing.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1204,7 +1222,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_result_slicing.cxx.obj:
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_row.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_row.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1212,7 +1230,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_row.cxx.obj: CXX_COMPIL
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_separated_list.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_separated_list.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1220,7 +1238,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_separated_list.cxx.obj:
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_simultaneous_transactions.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_simultaneous_transactions.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1228,7 +1246,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_simultaneous_transactio
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_sql_cursor.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_sql_cursor.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1236,7 +1254,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_sql_cursor.cxx.obj: CXX
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stateless_cursor.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_stateless_cursor.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1244,7 +1262,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stateless_cursor.cxx.ob
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_strconv.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_strconv.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1252,7 +1270,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_strconv.cxx.obj: CXX_CO
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stream_from.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_stream_from.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1260,7 +1278,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stream_from.cxx.obj: CX
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stream_query.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_stream_query.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1268,7 +1286,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stream_query.cxx.obj: C
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stream_to.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_stream_to.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1276,7 +1294,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stream_to.cxx.obj: CXX_
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_string_conversion.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_string_conversion.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1284,7 +1302,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_string_conversion.cxx.o
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_subtransaction.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_subtransaction.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1292,7 +1310,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_subtransaction.cxx.obj:
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_test_helpers.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_test_helpers.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1300,7 +1318,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_test_helpers.cxx.obj: C
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_thread_safety_model.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_thread_safety_model.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1308,7 +1326,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_thread_safety_model.cxx
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_time.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_time.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1316,7 +1334,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_time.cxx.obj: CXX_COMPI
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transaction.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_transaction.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1324,7 +1342,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transaction.cxx.obj: CX
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transaction_base.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_transaction_base.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1332,7 +1350,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transaction_base.cxx.ob
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transaction_focus.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_transaction_focus.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1340,7 +1358,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transaction_focus.cxx.o
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transactor.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_transactor.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1348,7 +1366,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transactor.cxx.obj: CXX
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_type_name.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_type_name.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1356,7 +1374,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_type_name.cxx.obj: CXX_
   TARGET_PDB = libpqxx-build\test\runner.pdb
 
 build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_zview.cxx.obj: CXX_COMPILER__runner_unscanned_Debug D$:\Work$ Folder\visualC++\libpqxx\test\unit\test_zview.cxx || cmake_object_order_depends_target_runner
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd
   INCLUDES = -I"C:\Program Files\PostgreSQL\17\include" -I"C:\Program Files\PostgreSQL\17\include\server" -I"D:\Work Folder\visualC++\SearchEngine\out\build\x64-debug\libpqxx-build\include" -I"D:\Work Folder\visualC++\libpqxx\include"
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
   OBJECT_FILE_DIR = libpqxx-build\test\CMakeFiles\runner.dir\unit
@@ -1372,7 +1390,7 @@ build libpqxx-build\test\CMakeFiles\runner.dir\unit\test_zview.cxx.obj: CXX_COMP
 # Link the executable libpqxx-build\test\runner.exe
 
 build libpqxx-build\test\runner.exe: CXX_EXECUTABLE_LINKER__runner_Debug libpqxx-build\test\CMakeFiles\runner.dir\runner.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test00.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test01.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test02.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test04.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test07.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test10.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test11.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test13.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test14.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test16.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test17.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test18.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test20.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test21.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test26.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test29.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test30.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test32.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test37.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test39.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test46.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test56.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test60.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test61.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test62.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test69.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test70.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test71.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test72.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test74.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test75.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test76.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test77.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test78.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test79.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test82.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test84.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test87.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test88.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test89.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\test90.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_array.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_binarystring.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_blob.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_cancel_query.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_column.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_composite.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_connection.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_cursor.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_encodings.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_error_verbosity.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_errorhandler.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_escape.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_exceptions.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_field.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_float.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_largeobject.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_nonblocking_connect.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_notice_handler.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_notification.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_pipeline.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_prepared_statement.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_range.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_read_transaction.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_result_iteration.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_result_slicing.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_row.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_separated_list.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_simultaneous_transactions.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_sql_cursor.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stateless_cursor.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_strconv.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stream_from.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stream_query.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_stream_to.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_string_conversion.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_subtransaction.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_test_helpers.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_thread_safety_model.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_time.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transaction.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transaction_base.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transaction_focus.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_transactor.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_type_name.cxx.obj libpqxx-build\test\CMakeFiles\runner.dir\unit\test_zview.cxx.obj | libpqxx-build\src\pqxx.lib C$:\Program$ Files\PostgreSQL\17\lib\libpq.lib || libpqxx-build\src\pqxx.lib
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /Zi -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = libpqxx-build\src\pqxx.lib  "C:\Program Files\PostgreSQL\17\lib\libpq.lib"  wsock32.lib  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = libpqxx-build\test\CMakeFiles\runner.dir
@@ -1518,14 +1536,14 @@ build libpqxx-build\test\all: phony libpqxx-build\test\runner.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeFindDependencyMacro.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CPack.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CPackComponent.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckFunctionExists.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindBoost.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPostgreSQL.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\GNUInstallDirs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\SelectLibraryConfigurations.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\WriteBasicConfigVersionFile.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Templates\CPackConfig.cmake.in CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\Work$ Folder\visualC++\SearchEngine\CMakeLists.txt D$:\Work$ Folder\visualC++\SearchEngine\config.ini D$:\Work$ Folder\visualC++\boost\lib\cmake\Boost-1.87.0\BoostConfig.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\Boost-1.87.0\BoostConfigVersion.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\BoostDetectToolset-1.87.0.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\boost_atomic-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\boost_atomic-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\boost_filesystem-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\boost_filesystem-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_headers-1.87.0\boost_headers-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_headers-1.87.0\boost_headers-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\boost_system-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\boost_system-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\libpqxx\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\cmake\config.cmake D$:\Work$ Folder\visualC++\libpqxx\cmake\libpqxx-config.cmake D$:\Work$ Folder\visualC++\libpqxx\cmake\pqxx_cxx_feature_checks.cmake D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_ASSUME.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CHARCONV_FLOAT.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CHARCONV_INT.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CMP.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CONCEPTS.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CXA_DEMANGLE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_GCC_PURE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_GCC_VISIBILITY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_LIKELY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_MULTIDIM.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_PATH.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_POLL.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SLEEP_FOR.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SOURCE_LOCATION.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SPAN.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SSIZE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_STRERROR_R.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_STRERROR_S.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_THREAD_LOCAL.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_YEAR_MONTH_DAY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\no_need_fslib.cxx D$:\Work$ Folder\visualC++\libpqxx\include\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\libpqxx.pc.in D$:\Work$ Folder\visualC++\libpqxx\src\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\test\CMakeLists.txt libpqxx-build\include\pqxx\config_cmake.h.in
+build build.ninja: RERUN_CMAKE | C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeFindDependencyMacro.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CPack.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CPackComponent.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckFunctionExists.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindBoost.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPostgreSQL.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\GNUInstallDirs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\SelectLibraryConfigurations.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\WriteBasicConfigVersionFile.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Templates\CPackConfig.cmake.in CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\Work$ Folder\visualC++\SearchEngine\CMakeLists.txt D$:\Work$ Folder\visualC++\SearchEngine\config.ini D$:\Work$ Folder\visualC++\boost\lib\cmake\Boost-1.87.0\BoostConfig.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\Boost-1.87.0\BoostConfigVersion.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\BoostDetectToolset-1.87.0.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\boost_atomic-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\boost_atomic-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\boost_filesystem-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\boost_filesystem-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_headers-1.87.0\boost_headers-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_headers-1.87.0\boost_headers-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\boost_locale-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\boost_locale-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\libboost_locale-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\libboost_locale-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\libboost_locale-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\libboost_locale-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\boost_system-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\boost_system-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\boost_url-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\boost_url-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\libboost_url-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\libboost_url-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\libboost_url-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\libboost_url-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\libpqxx\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\cmake\config.cmake D$:\Work$ Folder\visualC++\libpqxx\cmake\libpqxx-config.cmake D$:\Work$ Folder\visualC++\libpqxx\cmake\pqxx_cxx_feature_checks.cmake D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_ASSUME.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CHARCONV_FLOAT.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CHARCONV_INT.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CMP.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CONCEPTS.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CXA_DEMANGLE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_GCC_PURE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_GCC_VISIBILITY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_LIKELY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_MULTIDIM.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_PATH.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_POLL.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SLEEP_FOR.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SOURCE_LOCATION.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SPAN.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SSIZE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_STRERROR_R.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_STRERROR_S.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_THREAD_LOCAL.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_YEAR_MONTH_DAY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\no_need_fslib.cxx D$:\Work$ Folder\visualC++\libpqxx\include\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\libpqxx.pc.in D$:\Work$ Folder\visualC++\libpqxx\src\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\test\CMakeLists.txt libpqxx-build\include\pqxx\config_cmake.h.in
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeFindDependencyMacro.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CPack.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CPackComponent.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckFunctionExists.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindBoost.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPostgreSQL.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\GNUInstallDirs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\SelectLibraryConfigurations.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\WriteBasicConfigVersionFile.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Templates\CPackConfig.cmake.in CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\Work$ Folder\visualC++\SearchEngine\CMakeLists.txt D$:\Work$ Folder\visualC++\SearchEngine\config.ini D$:\Work$ Folder\visualC++\boost\lib\cmake\Boost-1.87.0\BoostConfig.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\Boost-1.87.0\BoostConfigVersion.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\BoostDetectToolset-1.87.0.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\boost_atomic-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\boost_atomic-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\boost_filesystem-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\boost_filesystem-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_headers-1.87.0\boost_headers-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_headers-1.87.0\boost_headers-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\boost_system-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\boost_system-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\libpqxx\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\cmake\config.cmake D$:\Work$ Folder\visualC++\libpqxx\cmake\libpqxx-config.cmake D$:\Work$ Folder\visualC++\libpqxx\cmake\pqxx_cxx_feature_checks.cmake D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_ASSUME.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CHARCONV_FLOAT.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CHARCONV_INT.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CMP.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CONCEPTS.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CXA_DEMANGLE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_GCC_PURE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_GCC_VISIBILITY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_LIKELY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_MULTIDIM.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_PATH.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_POLL.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SLEEP_FOR.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SOURCE_LOCATION.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SPAN.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SSIZE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_STRERROR_R.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_STRERROR_S.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_THREAD_LOCAL.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_YEAR_MONTH_DAY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\no_need_fslib.cxx D$:\Work$ Folder\visualC++\libpqxx\include\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\libpqxx.pc.in D$:\Work$ Folder\visualC++\libpqxx\src\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\test\CMakeLists.txt libpqxx-build\include\pqxx\config_cmake.h.in: phony
+build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeFindDependencyMacro.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CPack.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CPackComponent.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckFunctionExists.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindBoost.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPostgreSQL.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\GNUInstallDirs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\SelectLibraryConfigurations.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\WriteBasicConfigVersionFile.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Templates\CPackConfig.cmake.in CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\Work$ Folder\visualC++\SearchEngine\CMakeLists.txt D$:\Work$ Folder\visualC++\SearchEngine\config.ini D$:\Work$ Folder\visualC++\boost\lib\cmake\Boost-1.87.0\BoostConfig.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\Boost-1.87.0\BoostConfigVersion.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\BoostDetectToolset-1.87.0.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\boost_atomic-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\boost_atomic-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_atomic-1.87.0\libboost_atomic-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\boost_filesystem-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\boost_filesystem-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_filesystem-1.87.0\libboost_filesystem-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_headers-1.87.0\boost_headers-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_headers-1.87.0\boost_headers-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\boost_locale-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\boost_locale-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\libboost_locale-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\libboost_locale-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\libboost_locale-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_locale-1.87.0\libboost_locale-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\boost_system-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\boost_system-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_system-1.87.0\libboost_system-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\boost_url-config-version.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\boost_url-config.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\libboost_url-variant-vc143-mt-gd-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\libboost_url-variant-vc143-mt-gd-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\libboost_url-variant-vc143-mt-x32-1_87-static.cmake D$:\Work$ Folder\visualC++\boost\lib\cmake\boost_url-1.87.0\libboost_url-variant-vc143-mt-x64-1_87-static.cmake D$:\Work$ Folder\visualC++\libpqxx\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\cmake\config.cmake D$:\Work$ Folder\visualC++\libpqxx\cmake\libpqxx-config.cmake D$:\Work$ Folder\visualC++\libpqxx\cmake\pqxx_cxx_feature_checks.cmake D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_ASSUME.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CHARCONV_FLOAT.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CHARCONV_INT.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CMP.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CONCEPTS.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_CXA_DEMANGLE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_GCC_PURE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_GCC_VISIBILITY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_LIKELY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_MULTIDIM.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_PATH.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_POLL.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SLEEP_FOR.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SOURCE_LOCATION.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SPAN.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_SSIZE.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_STRERROR_R.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_STRERROR_S.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_THREAD_LOCAL.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\PQXX_HAVE_YEAR_MONTH_DAY.cxx D$:\Work$ Folder\visualC++\libpqxx\config-tests\no_need_fslib.cxx D$:\Work$ Folder\visualC++\libpqxx\include\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\libpqxx.pc.in D$:\Work$ Folder\visualC++\libpqxx\src\CMakeLists.txt D$:\Work$ Folder\visualC++\libpqxx\test\CMakeLists.txt libpqxx-build\include\pqxx\config_cmake.h.in: phony
 
 
 #############################################
