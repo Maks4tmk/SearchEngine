@@ -20,12 +20,6 @@ void handle_request(tcp::socket& socket, pqxx::connection& conn, const http::req
             res.prepare_payload();
             return;
         }
-       std::cout << "Чтение запроса..." << std::endl;
-        std::cout << "Метод: " << req.method_string() << std::endl;
-        std::cout << "Цель: " << req.target() << std::endl;
-        std::cout << "Версия: " << req.version() << std::endl;
-        std::cout << "Запрос прочитан: " << req.method_string() << " " << req.target() << std::endl;
-        std::cout << "Формирование ответа..." << std::endl;
 
         res.set(http::field::server, BOOST_BEAST_VERSION_STRING);
         res.set(http::field::content_type, "text/html; charset=utf-8");
@@ -59,7 +53,8 @@ void handle_request(tcp::socket& socket, pqxx::connection& conn, const http::req
                     key = pair.substr(0, pos);
                     value = pair.substr(pos + 1);
                     if (key == "query") {
-                        query = value;
+                        std::replace(value.begin(), value.end(), '+', ' ');
+                        query = boost::locale::to_lower(value);
                         break;
                     }
                 }

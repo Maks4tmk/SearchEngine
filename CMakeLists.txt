@@ -28,7 +28,7 @@ endif()
 
 add_subdirectory("D:/Work Folder/visualC++/libpqxx" libpqxx-build)
 
-add_executable(SearchEngine main.cpp spider.hpp spider.cpp search.hpp search.cpp "connection_pool.cpp")
+add_executable(SearchEngine main.cpp spider.hpp spider.cpp search.hpp search.cpp)
 
 configure_file(${CMAKE_SOURCE_DIR}/config.ini ${CMAKE_BINARY_DIR} COPYONLY)
 

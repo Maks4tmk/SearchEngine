@@ -7,8 +7,11 @@
 #include <boost/beast/version.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/ip/tcp.hpp>
+#include <boost/url/urls.hpp>
 #include <pqxx/pqxx>
-#include <atomic>
+#include <algorithm>
+#include <boost/locale.hpp>
+
 
 #pragma execution_character_set("utf-8")
 
