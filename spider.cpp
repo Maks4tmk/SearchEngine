@@ -15,6 +15,11 @@ void ñreating_tables(pqxx::connection& conn) {
     txn.exec("TRUNCATE TABLE words RESTART IDENTITY CASCADE");
     txn.exec("TRUNCATE TABLE documents RESTART IDENTITY CASCADE");
 
+    conn.prepare("insert_document", "INSERT INTO documents (url) VALUES ($1) ON CONFLICT (url) DO NOTHING");
+    conn.prepare("insert_word", "INSERT INTO words (word) VALUES ($1) ON CONFLICT (word) DO NOTHING");
+    conn.prepare("get_word_id", "SELECT id FROM words WHERE word=$1");
+    conn.prepare("insert_document_word", "INSERT INTO document_words (document_id, word_id, frequency) VALUES ($1, $2, $3)");
+
     txn.commit();
 }
 
