@@ -23,6 +23,7 @@ void сreating_tables(pqxx::connection& conn) {
     txn.commit();
 }
 
+
 std::string download_page(net::io_context& ioc, const std::string& url) {
     try {
         std::cout << "Загрузка страницы: " << url << std::endl;
@@ -31,22 +32,71 @@ std::string download_page(net::io_context& ioc, const std::string& url) {
             throw std::runtime_error("Неверный URL-адрес");
         }
 
+        std::string scheme = parsed->scheme();
         std::string host = parsed->host();
         std::string target = parsed->path();
         if (target.empty()) target = "/";
-        unsigned short port = parsed->has_port() ? std::stoi(parsed->port()) : 80;
+
+        unsigned short port = parsed->has_port() ? std::stoi(parsed->port()) : (scheme == "https" ? 443 : 80);
+
         tcp::resolver resolver{ ioc };
         auto results = resolver.resolve(host, std::to_string(port));
-        tcp::socket socket{ ioc };
-        net::connect(socket, results.begin(), results.end());
-        http::request<http::string_body> req{ http::verb::get, target, 11 };
-        req.set(http::field::host, host);
-        req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
-        http::write(socket, req);
-        beast::flat_buffer buffer;
-        http::response<http::dynamic_body> res;
-        http::read(socket, buffer, res);
-        return beast::buffers_to_string(res.body().data());
+
+        if (scheme == "https") {
+            ssl::context ctx{ ssl::context::tlsv12_client };
+
+            ctx.load_verify_file("certs/cacert.pem");
+
+
+            ctx.set_options(
+                ssl::context::default_workarounds |
+                ssl::context::no_sslv2 |
+                ssl::context::no_sslv3 |
+                ssl::context::no_tlsv1 |
+                ssl::context::no_tlsv1_1 |
+                ssl::context::single_dh_use
+            );
+
+            ssl::stream<tcp::socket> socket{ ioc, ctx };
+            net::connect(socket.lowest_layer(), results.begin(), results.end());
+
+            SSL_set_tlsext_host_name(socket.native_handle(), host.c_str());
+
+            try {
+                socket.handshake(ssl::stream_base::client);
+            }
+            catch (const boost::system::system_error& e) {
+                std::cerr << "Ошибка handshake: " << e.what() << std::endl;
+                throw;
+            }
+
+            http::request<http::string_body> req{ http::verb::get, target, 11 };
+            req.set(http::field::host, host);
+            req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
+            http::write(socket, req);
+
+            beast::flat_buffer buffer;
+            http::response<http::dynamic_body> res;
+            http::read(socket, buffer, res);
+
+            return beast::buffers_to_string(res.body().data());
+
+        } else {
+            tcp::socket socket{ ioc };
+            net::connect(socket, results.begin(), results.end());
+
+            http::request<http::string_body> req{ http::verb::get, target, 11 };
+            req.set(http::field::host, host);
+            req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
+            http::write(socket, req);
+
+            beast::flat_buffer buffer;
+            http::response<http::dynamic_body> res;
+            http::read(socket, buffer, res);
+
+            return beast::buffers_to_string(res.body().data());
+
+        }         
     }
     catch (const std::exception& e) {
         std::cerr << "Ошибка при загрузке страницы: " << e.what() << std::endl;
@@ -129,17 +179,23 @@ void crawl(const std::string& start_url, int depth, pqxx::connection& conn) {
             std::regex link_regex(R"(<a\s+(?:[^>]*?\s+)?href=["'](.*?)["'])");
             auto words_begin = std::sregex_iterator(content.begin(), content.end(), link_regex);
             auto words_end = std::sregex_iterator();
+
             for (std::sregex_iterator i = words_begin; i != words_end; ++i) {
                 std::smatch match = *i;
                 std::string link = match.str(1);
-                if (link.find("http") != 0) {
+
+                if (link.empty() && link[0] == '/') {
                     urls::result<urls::url_view> parsed = urls::parse_uri(url);
                     if (parsed) {
+                        std::string base_scheme = parsed->scheme();
                         std::string base_host = parsed->host();
-                        link = "http://" + base_host + link;
+                        link = base_scheme + "://" + base_host + link;
                     }
                 }
-                q.push({ link, current_depth + 1 });
+
+                if (link.find("http") == 0 || link.find("https") == 0) {
+                    q.push({ link, current_depth + 1 });
+                }
             }
         }
         std::cout << "Рекурсивный обход завершен!" << std::endl;

@@ -8,6 +8,7 @@
 #include <boost/beast/version.hpp>
 #include <boost/asio/connect.hpp>
 #include <boost/asio/ip/tcp.hpp>
+#include <boost/asio/ssl.hpp>
 #include <boost/locale.hpp>
 #include <boost/url.hpp>
 #include <pqxx/pqxx>

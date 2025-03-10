@@ -52,43 +52,25 @@ CMAKE_BUILD_TYPE:STRING=Debug
 CMAKE_CXX_COMPILER:STRING=cl.exe
 
 //Flags used by the CXX compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=/DWIN32 /D_WINDOWS /W3 /GR /EHsc
+CMAKE_CXX_FLAGS:STRING=/DWIN32 /D_WINDOWS /EHsc
 
 //Flags used by the CXX compiler during DEBUG builds.
-CMAKE_CXX_FLAGS_DEBUG:STRING=/MDd /Ob0 /Od /RTC1
+CMAKE_CXX_FLAGS_DEBUG:STRING=/Zi /Ob0 /Od /RTC1
 
 //Flags used by the CXX compiler during MINSIZEREL builds.
-CMAKE_CXX_FLAGS_MINSIZEREL:STRING=/MD /O1 /Ob1 /DNDEBUG
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=/O1 /Ob1 /DNDEBUG
 
 //Flags used by the CXX compiler during RELEASE builds.
-CMAKE_CXX_FLAGS_RELEASE:STRING=/MD /O2 /Ob2 /DNDEBUG
+CMAKE_CXX_FLAGS_RELEASE:STRING=/O2 /Ob2 /DNDEBUG
 
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
-CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=/MD /O2 /Ob1 /DNDEBUG
+CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=/Zi /O2 /Ob1 /DNDEBUG
 
 //Libraries linked by default with all C++ applications.
 CMAKE_CXX_STANDARD_LIBRARIES:STRING=kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
 
 //No help, variable specified on the command line.
 CMAKE_C_COMPILER:STRING=cl.exe
-
-//Flags used by the C compiler during all build types.
-CMAKE_C_FLAGS:STRING=/DWIN32 /D_WINDOWS /W3
-
-//Flags used by the C compiler during DEBUG builds.
-CMAKE_C_FLAGS_DEBUG:STRING=/MDd /Ob0 /Od /RTC1
-
-//Flags used by the C compiler during MINSIZEREL builds.
-CMAKE_C_FLAGS_MINSIZEREL:STRING=/MD /O1 /Ob1 /DNDEBUG
-
-//Flags used by the C compiler during RELEASE builds.
-CMAKE_C_FLAGS_RELEASE:STRING=/MD /O2 /Ob2 /DNDEBUG
-
-//Flags used by the C compiler during RELWITHDEBINFO builds.
-CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=/MD /O2 /Ob1 /DNDEBUG
-
-//Libraries linked by default with all C applications.
-CMAKE_C_STANDARD_LIBRARIES:STRING=kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
 
 //Flags used by the linker during all build types.
 CMAKE_EXE_LINKER_FLAGS:STRING=/machine:x64
@@ -292,11 +274,17 @@ CPACK_SOURCE_7Z:BOOL=ON
 //Enable to build ZIP source packages
 CPACK_SOURCE_ZIP:BOOL=ON
 
-//Arguments to supply to pkg-config
-PKG_CONFIG_ARGN:STRING=
+//Path to a library.
+LIB_EAY_DEBUG:FILEPATH=D:/Work Folder/visualC++/openssl/lib/libcrypto.lib
 
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
+//Path to a library.
+LIB_EAY_RELEASE:FILEPATH=D:/Work Folder/visualC++/openssl/lib/libcrypto.lib
+
+//Path to a file.
+OPENSSL_APPLINK_SOURCE:FILEPATH=D:/Work Folder/visualC++/openssl/include/openssl/applink.c
+
+//Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=D:/Work Folder/visualC++/openssl/include
 
 //The Set the PostgreSQL_INCLUDE_DIR cmake cache entry to the top-level
 // directory containing the PostgreSQL include directories. E.g
@@ -316,6 +304,12 @@ PostgreSQL_LIBRARY_RELEASE:FILEPATH=C:/Program Files/PostgreSQL/17/lib/libpq.lib
 // /usr/local/include/PostgreSQL/8.4 or C:/Program Files/PostgreSQL/8.4/include
 PostgreSQL_TYPE_INCLUDE_DIR:PATH=C:/Program Files/PostgreSQL/17/include/server
 
+//Path to a library.
+SSL_EAY_DEBUG:FILEPATH=D:/Work Folder/visualC++/openssl/lib/libssl.lib
+
+//Path to a library.
+SSL_EAY_RELEASE:FILEPATH=D:/Work Folder/visualC++/openssl/lib/libssl.lib
+
 //Value Computed by CMake
 SearchEngine_BINARY_DIR:STATIC=D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug
 
@@ -324,12 +318,6 @@ SearchEngine_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 SearchEngine_SOURCE_DIR:STATIC=D:/Work Folder/visualC++/SearchEngine
-
-//The directory containing a CMake configuration file for boost_OpenSSL.
-boost_OpenSSL_DIR:PATH=boost_OpenSSL_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for boost_asio.
-boost_asio_DIR:PATH=boost_asio_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for boost_atomic.
 boost_atomic_DIR:PATH=D:/Work Folder/visualC++/boost/lib/cmake/boost_atomic-1.87.0
@@ -342,12 +330,6 @@ boost_headers_DIR:PATH=D:/Work Folder/visualC++/boost/lib/cmake/boost_headers-1.
 
 //The directory containing a CMake configuration file for boost_locale.
 boost_locale_DIR:PATH=D:/Work Folder/visualC++/boost/lib/cmake/boost_locale-1.87.0
-
-//The directory containing a CMake configuration file for boost_openssl.
-boost_openssl_DIR:PATH=boost_openssl_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for boost_ssl.
-boost_ssl_DIR:PATH=boost_ssl_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for boost_system.
 boost_system_DIR:PATH=D:/Work Folder/visualC++/boost/lib/cmake/boost_system-1.87.0
@@ -371,8 +353,6 @@ libpqxx_SOURCE_DIR:STATIC=D:/Work Folder/visualC++/libpqxx
 
 //ADVANCED property for variable: Boost_DIR
 Boost_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_INCLUDE_DIR
-Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -403,20 +383,6 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_STANDARD_LIBRARIES
 CMAKE_CXX_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER
-CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS
-CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
-CMAKE_C_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_MINSIZEREL
-CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_RELEASE
-CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
-CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_STANDARD_LIBRARIES
-CMAKE_C_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:INTERNAL=Unknown
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
@@ -543,12 +509,12 @@ CPACK_SOURCE_7Z-ADVANCED:INTERNAL=1
 CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 //Details about finding Boost
 FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[D:/Work Folder/visualC++/boost/lib/cmake/Boost-1.87.0/BoostConfig.cmake][cfound components: system filesystem locale url ][v1.87.0()]
+//Details about finding OpenSSL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[D:/Work Folder/visualC++/openssl/lib/libcrypto.lib][D:/Work Folder/visualC++/openssl/include][c ][v3.5.0()]
 //Details about finding PostgreSQL
 FIND_PACKAGE_MESSAGE_DETAILS_PostgreSQL:INTERNAL=[C:/Program Files/PostgreSQL/17/lib/libpq.lib][C:/Program Files/PostgreSQL/17/include][c ][v17.0()]
-//ADVANCED property for variable: PKG_CONFIG_ARGN
-PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_INCLUDE_DIR
+OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 PQXX_HAVE_ASSUME:INTERNAL=TRUE
 //Result of TRY_COMPILE
@@ -597,16 +563,6 @@ PostgreSQL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 PostgreSQL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PostgreSQL_TYPE_INCLUDE_DIR
 PostgreSQL_TYPE_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//Last used BOOST_ROOT value.
-_BOOST_ROOT_LAST:INTERNAL=../boost
-//Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=
-//Last used Boost_INCLUDE_DIR value.
-_Boost_INCLUDE_DIR_LAST:INTERNAL=Boost_INCLUDE_DIR-NOTFOUND
-//Last used Boost_NAMESPACE value.
-_Boost_NAMESPACE_LAST:INTERNAL=boost
-//Last used Boost_USE_MULTITHREADED value.
-_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=D:/Work Folder/visualC++/SearchEngine/out/install/x64-debug
 //ADVANCED property for variable: boost_atomic_DIR

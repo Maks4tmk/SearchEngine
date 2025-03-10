@@ -18,7 +18,6 @@ public:
     session(tcp::socket socket, pqxx::connection& conn, net::io_context& ioc)
         : socket_(std::move(socket)), conn_(conn), timer_(ioc, std::chrono::seconds(30)) {}
 
-    // Запуск обработки соединения
     void run() {
         timer_.async_wait(
             [this](beast::error_code ec) {
@@ -31,7 +30,6 @@ public:
     }
 
 private:
-    // Чтение запроса
     void do_read() {
         auto self = shared_from_this();
         timer_.expires_after(std::chrono::seconds(30));
@@ -61,8 +59,6 @@ private:
             });
     }
 
-
-    // Обработка запроса
     void do_handle_request() {
         auto self = shared_from_this();
         try {
@@ -99,7 +95,6 @@ private:
         }
     }
 
-    // Закрытие соединения
     void do_close() {
         beast::error_code ec;
         socket_.shutdown(tcp::socket::shutdown_send, ec);
@@ -109,7 +104,7 @@ private:
     }
 };
 
-// Функция для принятия новых соединений
+
 void do_accept(tcp::acceptor& acceptor, pqxx::connection& conn, net::io_context& ioc) {
     acceptor.async_accept(
         [&acceptor, &conn, &ioc](beast::error_code ec, tcp::socket socket) {
@@ -120,7 +115,6 @@ void do_accept(tcp::acceptor& acceptor, pqxx::connection& conn, net::io_context&
             else {
                 std::cerr << "Ошибка при принятии соединения: " << ec.message() << std::endl;
             }
-            // Продолжаем принятие новых соединений
             do_accept(acceptor, conn, ioc);
         });
 }
@@ -176,21 +170,32 @@ int main() {
             }
             });
 
+
         boost::asio::io_context ioc{ 1 };
 
         tcp::acceptor acceptor{ ioc, {tcp::v4(), static_cast<unsigned short>(server_port)} };
         std::cout << "Сервер слушает на порту " << server_port << std::endl;
 
-        // Запуск принятия соединений
+
+        boost::locale::generator gen;
+        std::locale loc;
+        try {
+            loc = gen("ru_RU.UTF-8");
+        }
+        catch (const std::exception& e) {
+            std::cerr << "Ошибка при инициализации локали: " << e.what() << std::endl;
+            return 1;
+        }
+        std::locale::global(loc);
+
+
         do_accept(acceptor, conn, ioc);
 
-        // Запуск обработки сигналов завершения
         net::signal_set signals{ ioc, SIGINT, SIGTERM };
         signals.async_wait([&ioc](beast::error_code, int) {
             ioc.stop();
             });
 
-        // Запуск обработки событий
         ioc.run();
 
         std::cout << "Отключение от базы данных: " << conn.dbname() << std::endl;

@@ -26,6 +26,19 @@ if(NOT PostgreSQL_FOUND)
     message(FATAL_ERROR "PostgreSQL not found!")
 endif()
 
+set(OPENSSL_ROOT_DIR "D:/Work Folder/visualC++/openssl")
+find_package(OpenSSL REQUIRED)
+if(NOT OPENSSL_FOUND)
+    message(FATAL_ERROR "OpenSSL not found in directory ${OPENSSL_ROOT_DIR}. Ensure it is compiled.")
+endif()
+
+set(CACERT_FILE "${CMAKE_SOURCE_DIR}/certs/cacert.pem")
+configure_file(
+    ${CACERT_FILE}
+    ${CMAKE_BINARY_DIR}/certs/cacert.pem
+    COPYONLY
+)
+
 add_subdirectory("D:/Work Folder/visualC++/libpqxx" libpqxx-build)
 
 add_executable(SearchEngine main.cpp spider.hpp spider.cpp search.hpp search.cpp)
@@ -35,11 +48,13 @@ configure_file(${CMAKE_SOURCE_DIR}/config.ini ${CMAKE_BINARY_DIR} COPYONLY)
 target_include_directories(SearchEngine PRIVATE 
     ${Boost_INCLUDE_DIRS} 
     ${PostgreSQL_INCLUDE_DIRS}
+    ${OPENSSL_INCLUDE_DIR}
 )
 target_link_libraries(SearchEngine PRIVATE 
     ${Boost_LIBRARIES}
     ${PostgreSQL_LIBRARIES} 
     pqxx
+    ${OPENSSL_LIBRARIES}
 )
 
 
