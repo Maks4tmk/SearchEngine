@@ -71,8 +71,7 @@ void handle_request(tcp::socket& socket, pqxx::connection& conn, const http::req
             }
         }
         else {
-            res.result(http::status::bad_request);
-            oss << "<h1>Недопустимый метод запроса</h1>";
+            oss << "<h2>Введите запрос</h2>";
         }
 
         oss << "</body></html>";

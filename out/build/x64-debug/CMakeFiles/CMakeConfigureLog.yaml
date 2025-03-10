@@ -3014,3 +3014,578 @@ events:
         
       exitCode: 1
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:2 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_ASSUME"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_0e5ef
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_0e5ef.dir\\PQXX_HAVE_ASSUME.cxx.obj /FdCMakeFiles\\cmTC_0e5ef.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_ASSUME.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_0e5ef.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0e5ef.dir\\PQXX_HAVE_ASSUME.cxx.obj  /out:cmTC_0e5ef.exe /implib:cmTC_0e5ef.lib /pdb:cmTC_0e5ef.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:6 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_FLOAT"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_06b4e
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_06b4e.dir\\PQXX_HAVE_CHARCONV_FLOAT.cxx.obj /FdCMakeFiles\\cmTC_06b4e.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_CHARCONV_FLOAT.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_06b4e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_06b4e.dir\\PQXX_HAVE_CHARCONV_FLOAT.cxx.obj  /out:cmTC_06b4e.exe /implib:cmTC_06b4e.lib /pdb:cmTC_06b4e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:10 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_INT"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_70773
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_70773.dir\\PQXX_HAVE_CHARCONV_INT.cxx.obj /FdCMakeFiles\\cmTC_70773.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_CHARCONV_INT.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_70773.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_70773.dir\\PQXX_HAVE_CHARCONV_INT.cxx.obj  /out:cmTC_70773.exe /implib:cmTC_70773.lib /pdb:cmTC_70773.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:14 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CMP"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_69e78
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_69e78.dir\\PQXX_HAVE_CMP.cxx.obj /FdCMakeFiles\\cmTC_69e78.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_CMP.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_69e78.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_69e78.dir\\PQXX_HAVE_CMP.cxx.obj  /out:cmTC_69e78.exe /implib:cmTC_69e78.lib /pdb:cmTC_69e78.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:18 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CONCEPTS"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_75f7a
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_75f7a.dir\\PQXX_HAVE_CONCEPTS.cxx.obj /FdCMakeFiles\\cmTC_75f7a.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_CONCEPTS.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_75f7a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_75f7a.dir\\PQXX_HAVE_CONCEPTS.cxx.obj  /out:cmTC_75f7a.exe /implib:cmTC_75f7a.lib /pdb:cmTC_75f7a.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:22 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CXA_DEMANGLE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_19cd8
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_19cd8.dir\\PQXX_HAVE_CXA_DEMANGLE.cxx.obj /FdCMakeFiles\\cmTC_19cd8.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_CXA_DEMANGLE.cxx"
+        FAILED: CMakeFiles/cmTC_19cd8.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_19cd8.dir\\PQXX_HAVE_CXA_DEMANGLE.cxx.obj /FdCMakeFiles\\cmTC_19cd8.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_CXA_DEMANGLE.cxx"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_CXA_DEMANGLE.cxx(7): fatal error C1083: Не удается открыть файл включение: cxxabi.h: No such file or directory,
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:26 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_PURE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_77a10
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_77a10.dir\\PQXX_HAVE_GCC_PURE.cxx.obj /FdCMakeFiles\\cmTC_77a10.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_PURE.cxx"
+        FAILED: CMakeFiles/cmTC_77a10.dir/PQXX_HAVE_GCC_PURE.cxx.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_77a10.dir\\PQXX_HAVE_GCC_PURE.cxx.obj /FdCMakeFiles\\cmTC_77a10.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_PURE.cxx"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_PURE.cxx(2): error C2065: pure: необъявленный идентификатор
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_PURE.cxx(2): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "f"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_PURE.cxx(2): error C2059: синтаксическая ошибка: )
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_PURE.cxx(3): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_PURE.cxx(3): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_PURE.cxx(9): error C3861: f: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:30 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6b108
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_6b108.dir\\PQXX_HAVE_GCC_VISIBILITY.cxx.obj /FdCMakeFiles\\cmTC_6b108.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx"
+        FAILED: CMakeFiles/cmTC_6b108.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_6b108.dir\\PQXX_HAVE_GCC_VISIBILITY.cxx.obj /FdCMakeFiles\\cmTC_6b108.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(2): error C2143: синтаксическая ошибка: отсутствие ")" перед "("
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(2): error C2079: "visibility" использует не имеющую определения структуру struct "__attribute__"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(2): error C2440: инициализация: невозможно преобразовать "const char [7]" в "int"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(2): note: Не существует контекста, в котором такое преобразование возможно
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(2): error C2059: синтаксическая ошибка: )
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(2): error C2059: синтаксическая ошибка: )
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(2): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "D"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(3): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(10): error C2065: D: необъявленный идентификатор
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(10): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "d"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(10): error C2065: d: необъявленный идентификатор
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_GCC_VISIBILITY.cxx(11): error C2065: d: необъявленный идентификатор
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:34 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_LIKELY"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_bfddb
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_bfddb.dir\\PQXX_HAVE_LIKELY.cxx.obj /FdCMakeFiles\\cmTC_bfddb.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_LIKELY.cxx"
+        FAILED: CMakeFiles/cmTC_bfddb.dir/PQXX_HAVE_LIKELY.cxx.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_bfddb.dir\\PQXX_HAVE_LIKELY.cxx.obj /FdCMakeFiles\\cmTC_bfddb.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_LIKELY.cxx"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_LIKELY.cxx(7): error C2065: because: необъявленный идентификатор
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_LIKELY.cxx(7): error C2065: older: необъявленный идентификатор
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_LIKELY.cxx(7): error C2065: C: необъявленный идентификатор
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_LIKELY.cxx(7): error C2065: standard: необъявленный идентификатор
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_LIKELY.cxx(7): error C3861: deliberately_fail: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:38 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_MULTIDIM"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_20d94
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_20d94.dir\\PQXX_HAVE_MULTIDIM.cxx.obj /FdCMakeFiles\\cmTC_20d94.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_MULTIDIM.cxx"
+        FAILED: CMakeFiles/cmTC_20d94.dir/PQXX_HAVE_MULTIDIM.cxx.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_20d94.dir\\PQXX_HAVE_MULTIDIM.cxx.obj /FdCMakeFiles\\cmTC_20d94.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_MULTIDIM.cxx"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_MULTIDIM.cxx(5): fatal error C1189: #error:  "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:42 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_PATH"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_54b55
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_54b55.dir\\PQXX_HAVE_PATH.cxx.obj /FdCMakeFiles\\cmTC_54b55.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_PATH.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_54b55.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_54b55.dir\\PQXX_HAVE_PATH.cxx.obj  /out:cmTC_54b55.exe /implib:cmTC_54b55.lib /pdb:cmTC_54b55.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:46 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_POLL"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_f98af
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_f98af.dir\\PQXX_HAVE_POLL.cxx.obj /FdCMakeFiles\\cmTC_f98af.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_POLL.cxx"
+        FAILED: CMakeFiles/cmTC_f98af.dir/PQXX_HAVE_POLL.cxx.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_f98af.dir\\PQXX_HAVE_POLL.cxx.obj /FdCMakeFiles\\cmTC_f98af.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_POLL.cxx"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_POLL.cxx(2): fatal error C1083: Не удается открыть файл включение: poll.h: No such file or directory,
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:50 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SLEEP_FOR"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_17e98
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_17e98.dir\\PQXX_HAVE_SLEEP_FOR.cxx.obj /FdCMakeFiles\\cmTC_17e98.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_SLEEP_FOR.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_17e98.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_17e98.dir\\PQXX_HAVE_SLEEP_FOR.cxx.obj  /out:cmTC_17e98.exe /implib:cmTC_17e98.lib /pdb:cmTC_17e98.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:54 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SOURCE_LOCATION"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_4947a
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_4947a.dir\\PQXX_HAVE_SOURCE_LOCATION.cxx.obj /FdCMakeFiles\\cmTC_4947a.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_SOURCE_LOCATION.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_4947a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4947a.dir\\PQXX_HAVE_SOURCE_LOCATION.cxx.obj  /out:cmTC_4947a.exe /implib:cmTC_4947a.lib /pdb:cmTC_4947a.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:58 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SPAN"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_a56ca
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_a56ca.dir\\PQXX_HAVE_SPAN.cxx.obj /FdCMakeFiles\\cmTC_a56ca.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_SPAN.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_a56ca.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a56ca.dir\\PQXX_HAVE_SPAN.cxx.obj  /out:cmTC_a56ca.exe /implib:cmTC_a56ca.lib /pdb:cmTC_a56ca.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:62 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SSIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_5f04d
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_5f04d.dir\\PQXX_HAVE_SSIZE.cxx.obj /FdCMakeFiles\\cmTC_5f04d.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_SSIZE.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_5f04d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_5f04d.dir\\PQXX_HAVE_SSIZE.cxx.obj  /out:cmTC_5f04d.exe /implib:cmTC_5f04d.lib /pdb:cmTC_5f04d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:66 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_R"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_4a200
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_4a200.dir\\PQXX_HAVE_STRERROR_R.cxx.obj /FdCMakeFiles\\cmTC_4a200.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_STRERROR_R.cxx"
+        FAILED: CMakeFiles/cmTC_4a200.dir/PQXX_HAVE_STRERROR_R.cxx.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_4a200.dir\\PQXX_HAVE_STRERROR_R.cxx.obj /FdCMakeFiles\\cmTC_4a200.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_STRERROR_R.cxx"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_STRERROR_R.cxx(11): error C3861: strerror_r: идентификатор не найден
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:70 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_S"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_0888d
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_0888d.dir\\PQXX_HAVE_STRERROR_S.cxx.obj /FdCMakeFiles\\cmTC_0888d.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_STRERROR_S.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_0888d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0888d.dir\\PQXX_HAVE_STRERROR_S.cxx.obj  /out:cmTC_0888d.exe /implib:cmTC_0888d.lib /pdb:cmTC_0888d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:74 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_88f79
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_88f79.dir\\PQXX_HAVE_THREAD_LOCAL.cxx.obj /FdCMakeFiles\\cmTC_88f79.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_THREAD_LOCAL.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_88f79.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_88f79.dir\\PQXX_HAVE_THREAD_LOCAL.cxx.obj  /out:cmTC_88f79.exe /implib:cmTC_88f79.lib /pdb:cmTC_88f79.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:78 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_YEAR_MONTH_DAY"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_1f878
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_1f878.dir\\PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj /FdCMakeFiles\\cmTC_1f878.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\PQXX_HAVE_YEAR_MONTH_DAY.cxx"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_1f878.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1f878.dir\\PQXX_HAVE_YEAR_MONTH_DAY.cxx.obj  /out:cmTC_1f878.exe /implib:cmTC_1f878.lib /pdb:cmTC_1f878.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Work Folder/visualC++/libpqxx/cmake/pqxx_cxx_feature_checks.cmake:82 (try_compile)"
+      - "D:/Work Folder/visualC++/libpqxx/cmake/config.cmake:16 (include)"
+      - "D:/Work Folder/visualC++/libpqxx/CMakeLists.txt:27 (include)"
+    directories:
+      source: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1 /Zi"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/Work Folder/visualC++/libpqxx/cmake"
+    buildResult:
+      variable: "no_need_fslib"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Work Folder/visualC++/SearchEngine/out/build/x64-debug/libpqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_f3484
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_f3484.dir\\no_need_fslib.cxx.obj /FdCMakeFiles\\cmTC_f3484.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\no_need_fslib.cxx"
+        FAILED: CMakeFiles/cmTC_f3484.dir/no_need_fslib.cxx.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1442~1.344\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 /Zi -std:c++20 -MDd /showIncludes /FoCMakeFiles\\cmTC_f3484.dir\\no_need_fslib.cxx.obj /FdCMakeFiles\\cmTC_f3484.dir\\ /FS -c "D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\no_need_fslib.cxx"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\no_need_fslib.cxx(19): error C2280: "std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const wchar_t *)": предпринята попытка ссылки на удаленную функцию
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.42.34433\\include\\ostream(978): note:  см. объявление "std::operator <<"
+        D:\\Work Folder\\visualC++\\libpqxx\\config-tests\\no_need_fslib.cxx(19): error C2088: встроенный оператор "<<" не может быть применен к операнду типа "std::ostream"
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
