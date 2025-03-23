@@ -150,6 +150,8 @@ int main() {
         std::string start_url = config.get<std::string>("spider.start_url");
         int depth = config.get<int>("spider.max_depth");
 
+        start_url = remove_fragment(start_url);
+
         int server_port = config.get<int>("server.port");
 
         std::string connection_string = "host=" + db_host + " port=" + std::to_string(db_port) +

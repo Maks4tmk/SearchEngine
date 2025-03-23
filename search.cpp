@@ -24,6 +24,11 @@ void handle_request(tcp::socket& socket, pqxx::connection& conn, const http::req
         res.set(http::field::server, BOOST_BEAST_VERSION_STRING);
         res.set(http::field::content_type, "text/html; charset=utf-8");
 
+        /*пометка на будущее 
+        заметил что некоторые названия страниц отображаються не коректно.
+        надо заменить отображение ссылок на отображение заголовка страницы
+        желательно чтобы полный адрес страницы был под заголовком.*/
+
         std::ostringstream oss;
         oss << R"(
                 <html>
@@ -99,6 +104,8 @@ std::string search_pages(pqxx::connection& conn, const std::string& query) {
     while (iss >> word) {
         words.push_back(word);
     }
+
+    /*Обнаружил проблему с чтением запроса состоящего более чем из трёх слов (Читаються только первые два слова остальное игнорируеться)*/
 
     //=======================================================
     std::cout << "Полученный запрос: " << query << std::endl;

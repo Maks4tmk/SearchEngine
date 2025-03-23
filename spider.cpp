@@ -24,6 +24,53 @@ void сreating_tables(pqxx::connection& conn) {
 }
 
 
+std::string remove_fragment(const std::string& url) {
+    size_t hash_pos = url.find('#');
+    if (hash_pos != std::string::npos) {
+        return url.substr(0, hash_pos);
+    }
+    return url;
+}
+
+
+template<typename Stream>
+std::string handle_http_request(Stream& stream, net::io_context& ioc, const std::string& host, const std::string& target, const std::string& scheme) {
+    http::request<http::string_body> req{ http::verb::get, target, 11 };
+    req.set(http::field::host, host);
+    req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
+
+    beast::flat_buffer buffer;
+    http::response<http::dynamic_body> res;
+
+    http::write(stream, req);
+    http::read(stream, buffer, res);
+
+    if (res.result() == http::status::moved_permanently ||
+        res.result() == http::status::found ||
+        res.result() == http::status::see_other ||
+        res.result() == http::status::temporary_redirect ||
+        res.result() == http::status::permanent_redirect) {
+
+        auto location = res.base()[http::field::location];
+        if (!location.empty()) {
+            std::string new_url = std::string(location);
+
+            if (new_url[0] == '/') {
+                urls::result<urls::url_view> parsed = urls::parse_uri(scheme + "://" + host);
+                if (parsed) {
+                    std::string base_scheme = parsed->scheme();
+                    std::string base_host = parsed->host();
+                    new_url = base_scheme + "://" + base_host + new_url;
+                }
+            }
+            std::cout << "Переход по редиректу на: " << new_url << std::endl;
+            return download_page(ioc, new_url);
+        }
+    }
+    return beast::buffers_to_string(res.body().data());
+}
+
+
 std::string download_page(net::io_context& ioc, const std::string& url) {
     try {
         std::cout << "Загрузка страницы: " << url << std::endl;
@@ -70,31 +117,12 @@ std::string download_page(net::io_context& ioc, const std::string& url) {
                 throw;
             }
 
-            http::request<http::string_body> req{ http::verb::get, target, 11 };
-            req.set(http::field::host, host);
-            req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
-            http::write(socket, req);
-
-            beast::flat_buffer buffer;
-            http::response<http::dynamic_body> res;
-            http::read(socket, buffer, res);
-
-            return beast::buffers_to_string(res.body().data());
+            return handle_http_request(socket, ioc, host, target, scheme);
 
         } else {
             tcp::socket socket{ ioc };
             net::connect(socket, results.begin(), results.end());
-
-            http::request<http::string_body> req{ http::verb::get, target, 11 };
-            req.set(http::field::host, host);
-            req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
-            http::write(socket, req);
-
-            beast::flat_buffer buffer;
-            http::response<http::dynamic_body> res;
-            http::read(socket, buffer, res);
-
-            return beast::buffers_to_string(res.body().data());
+            return handle_http_request(socket, ioc, host, target, scheme);
 
         }         
     }
@@ -167,15 +195,20 @@ void crawl(const std::string& start_url, int depth, pqxx::connection& conn) {
         std::queue<std::pair<std::string, int>> q;
         q.push({ start_url, 0 });
         std::unordered_set<std::string> visited;
-        boost::asio::io_context ioc;
+        net::io_context ioc;
+
         while (!q.empty()) {
             auto [url, current_depth] = q.front();
             q.pop();
+
             if (visited.count(url) || current_depth > depth) continue;
             visited.insert(url);
+
             std::string content = download_page(ioc, url);
             if (content.empty()) continue;
+
             index_page(content, url, conn);
+
             std::regex link_regex(R"(<a\s+(?:[^>]*?\s+)?href=["'](.*?)["'])");
             auto words_begin = std::sregex_iterator(content.begin(), content.end(), link_regex);
             auto words_end = std::sregex_iterator();
@@ -184,7 +217,13 @@ void crawl(const std::string& start_url, int depth, pqxx::connection& conn) {
                 std::smatch match = *i;
                 std::string link = match.str(1);
 
-                if (link.empty() && link[0] == '/') {
+                link = remove_fragment(link);
+
+                if (link.empty() || link[0] == '#') {
+                    continue;
+                }
+
+                if (!link.empty() && link[0] == '/') {
                     urls::result<urls::url_view> parsed = urls::parse_uri(url);
                     if (parsed) {
                         std::string base_scheme = parsed->scheme();
@@ -193,7 +232,7 @@ void crawl(const std::string& start_url, int depth, pqxx::connection& conn) {
                     }
                 }
 
-                if (link.find("http") == 0 || link.find("https") == 0) {
+                if (!link.empty() && link.find("http") == 0 || link.find("https") == 0) {
                     q.push({ link, current_depth + 1 });
                 }
             }

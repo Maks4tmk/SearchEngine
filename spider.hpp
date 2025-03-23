@@ -30,6 +30,11 @@ namespace urls = boost::urls;
 using tcp = net::ip::tcp;
 
 void ñreating_tables(pqxx::connection& conn);
+std::string remove_fragment(const std::string& url);
+
+template <typename Stream>
+std::string handle_http_request(Stream& stream, net::io_context& ioc, const std::string& host, const std::string& target, const std::string& scheme);
+
 std::string download_page(net::io_context& ioc, const std::string& url);
 void index_page(const std::string& content, const std::string& url, pqxx::connection& conn);
 void crawl(const std::string& start_url, int depth, pqxx::connection& conn);
