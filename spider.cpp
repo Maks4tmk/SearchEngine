@@ -3,7 +3,11 @@
 void сreating_tables(pqxx::connection& conn) {
     
     pqxx::work txn(conn);
-    txn.exec("CREATE TABLE IF NOT EXISTS documents (id SERIAL PRIMARY KEY, url TEXT UNIQUE)");
+    txn.exec("DROP TABLE IF EXISTS document_words CASCADE");
+    txn.exec("DROP TABLE IF EXISTS words CASCADE");
+    txn.exec("DROP TABLE IF EXISTS documents CASCADE");
+
+    txn.exec("CREATE TABLE IF NOT EXISTS documents (id SERIAL PRIMARY KEY, url TEXT UNIQUE, title TEXT)");
     txn.exec("CREATE TABLE IF NOT EXISTS words (id SERIAL PRIMARY KEY, word TEXT UNIQUE)");
     txn.exec("CREATE TABLE IF NOT EXISTS document_words ("
         "document_id INTEGER REFERENCES documents(id) ON DELETE CASCADE,"
@@ -11,11 +15,7 @@ void сreating_tables(pqxx::connection& conn) {
         "frequency INTEGER,"
         "PRIMARY KEY (document_id, word_id))");
 
-    txn.exec("TRUNCATE TABLE document_words RESTART IDENTITY CASCADE");
-    txn.exec("TRUNCATE TABLE words RESTART IDENTITY CASCADE");
-    txn.exec("TRUNCATE TABLE documents RESTART IDENTITY CASCADE");
-
-    conn.prepare("insert_document", "INSERT INTO documents (url) VALUES ($1) ON CONFLICT (url) DO NOTHING");
+    conn.prepare("insert_document", "INSERT INTO documents (url, title) VALUES ($1, $2) ON CONFLICT (url) DO UPDATE SET title=EXCLUDED.title");
     conn.prepare("insert_word", "INSERT INTO words (word) VALUES ($1) ON CONFLICT (word) DO NOTHING");
     conn.prepare("get_word_id", "SELECT id FROM words WHERE word=$1");
     conn.prepare("insert_document_word", "INSERT INTO document_words (document_id, word_id, frequency) VALUES ($1, $2, $3)");
@@ -161,8 +161,16 @@ void index_page(const std::string& content, const std::string& url, pqxx::connec
             }
         }
 
+        std::string title;
+        std::smatch match;
+        std::regex title_regex(R"(<title>(.*?)<\/title>)");
+        if (std::regex_search(content, match, title_regex) && match.size() > 1) {
+            title = match.str(1);
+            title = boost::locale::to_lower(title, loc);
+        }
+
         pqxx::work txn(conn);
-        txn.exec_prepared("insert_document", url);
+        txn.exec_prepared("insert_document", url, title);
         pqxx::result doc_result = txn.exec_params("SELECT id FROM documents WHERE url=$1", url);
         if (doc_result.size() == 0) {
             throw std::runtime_error("Не удалось найти ID документа.");

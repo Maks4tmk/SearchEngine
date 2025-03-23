@@ -24,21 +24,35 @@ void handle_request(tcp::socket& socket, pqxx::connection& conn, const http::req
         res.set(http::field::server, BOOST_BEAST_VERSION_STRING);
         res.set(http::field::content_type, "text/html; charset=utf-8");
 
-        /*пометка на будущее 
-        заметил что некоторые названия страниц отображаються не коректно.
-        надо заменить отображение ссылок на отображение заголовка страницы
-        желательно чтобы полный адрес страницы был под заголовком.*/
-
         std::ostringstream oss;
         oss << R"(
                 <html>
                     <head>
                         <meta charset="utf-8">
+                        <title>Поиск</title>
+                        <style>
+                            body {
+                                font-family: Arial, sans-serif;
+                                margin: 20px;
+                                background-color: #f4f4f4;
+                            }
+                            form {
+                                margin-bottom: 20px;
+                            }
+                            input[type="text"] {
+                                width: 300px;
+                                padding: 8px;
+                                margin-right: 10px;
+                            }
+                            input[type="submit"] {
+                                padding: 8px 16px;
+                            }
+                        </style>
                     </head>
                     <body>
                         <form method="post">
-                            <input type="text" name="query" placeholder="Enter search query">
-                            <input type="submit" value="Search">
+                            <input type="text" name="query" placeholder="Введите поисковый запрос">
+                            <input type="submit" value="Поиск">
                         </form>
                     </body>
                 </html>
@@ -75,9 +89,6 @@ void handle_request(tcp::socket& socket, pqxx::connection& conn, const http::req
                 oss << search_pages(conn, query);
             }
         }
-        else {
-            oss << "<h2>Введите запрос</h2>";
-        }
 
         oss << "</body></html>";
         res.body() = oss.str();
@@ -105,7 +116,6 @@ std::string search_pages(pqxx::connection& conn, const std::string& query) {
         words.push_back(word);
     }
 
-    /*Обнаружил проблему с чтением запроса состоящего более чем из трёх слов (Читаються только первые два слова остальное игнорируеться)*/
 
     //=======================================================
     std::cout << "Полученный запрос: " << query << std::endl;
@@ -120,7 +130,7 @@ std::string search_pages(pqxx::connection& conn, const std::string& query) {
         return "<h1>Запрос не предоставлен</h1>";
     }
 
-    std::string sql = "SELECT d.url, SUM(dw.frequency) as relevance "
+    std::string sql = "SELECT d.url, d.title, SUM(dw.frequency) as relevance "
         "FROM documents d "
         "JOIN document_words dw ON d.id = dw.document_id "
         "JOIN words w ON dw.word_id = w.id "
@@ -131,7 +141,7 @@ std::string search_pages(pqxx::connection& conn, const std::string& query) {
         sql += "$" + std::to_string(i + 1);
         if (i != words.size() - 1) sql += ", ";
     }
-    sql += ") GROUP BY d.url ORDER BY relevance DESC LIMIT 10;";
+    sql += ") GROUP BY d.url, d.title ORDER BY relevance DESC;";
 
     std::cout << "Формированный SQL-запрос: " << sql << std::endl;
 
@@ -158,14 +168,71 @@ std::string search_pages(pqxx::connection& conn, const std::string& query) {
         }
     }
 
+    {
+        oss << R"(
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f4f4f4;
+            }
+            .search-result {
+                margin-bottom: 15px;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .search-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .search-title {
+                font-size: 1.1em;
+                margin: 0;
+            }
+            .search-title a {
+                color: #007BFF;
+                text-decoration: none;
+            }
+            .search-title a:hover {
+                text-decoration: underline;
+            }
+            .search-relevance {
+                font-size: 0.9em;
+                color: #555;
+                margin-left: 10px;
+            }
+            .search-url {
+                font-size: 0.7em;
+                color: #007BFF;
+                text-decoration: none;
+                margin-top: 5px;
+                display: block;
+            }
+        </style>
+    )";
+    }
+
     for (auto row : results) {
         try {
-            if (!row[0].is_null() && !row[1].is_null()) {
+            if (!row[0].is_null() && !row[1].is_null() && !row[2].is_null()) {
                 std::string url = row[0].as<std::string>();
-                int relevance = row[1].as<int>();
-                oss << "<a href=\"" << url << "\" target=\"_blank\">" << url << "</a> (релевантность: " << relevance << ")<br>";
-            
-            } else { std::cerr << "Некорректные данные в строке результата." << std::endl; }
+                std::string title = row[1].as<std::string>();
+                int relevance = row[2].as<int>();
+
+                oss << R"(<div class="search-result">)";
+                oss << R"(<div class="search-header">)";
+                oss << R"(<h2 class="search-title"><a href=")" << url << R"(" target="_blank" class="search-title">)" << title << R"(</a></h2>)";
+                oss << R"(<span class="search-relevance">Релевантность: )" << relevance << R"(</span>)";
+                oss << R"(</div>)";
+                oss << R"(<a href=")" << url << R"(" target="_blank" class="search-url">)" << url << R"(</a>)";
+                oss << R"(</div>)";
+
+            } 
+            else { std::cerr << "Некорректные данные в строке результата." << std::endl; }
         }
         catch (const std::exception& e) {
             std::cerr << "Ошибка при обработке строки результата: " << e.what() << std::endl;
