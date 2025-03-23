@@ -13,9 +13,10 @@
 
 ## Требования
 
-- **Boost**: Версия 1.70 или выше.
+- **Boost**: Версия 1.87 или выше.
 - **PostgreSQL**: Для хранения данных.
 - **libpqxx**: Библиотека для работы с PostgreSQL.
+- **OpenSSL**: Библиотека для работы с SSL/TLS
 - **C++17**: Компилятор, поддерживающий стандарт C++17.
 
 ---
@@ -25,19 +26,19 @@
 ### 1. Установка зависимостей
 
 Убедитесь, что у вас установлены следующие компоненты:
-- Boost: `sudo apt install libboost-all-dev`
-- PostgreSQL: `sudo apt install postgresql libpq-dev`
-- libpqxx: `sudo apt install libpqxx-dev`
-
+- Boost: `www.boost.org/users/download/`
+- PostgreSQL: `www.postgresql.org/download/)`
+- libpqxx: `github.com/jtv/libpqxx`
+- OpenSSL: `github.com/openssl/openssl`
+  
 ### 2. Создание базы данных
 
 Создайте базу данных PostgreSQL и пользователя:
 ```bash
-sudo -u postgres psql
+postgres psql
 CREATE DATABASE spider;
 CREATE USER spider_user WITH PASSWORD 'password';
 GRANT ALL PRIVILEGES ON DATABASE spider TO spider_user;
-\q
 ```
 
 ### 3. Настройка конфигурационного файла
